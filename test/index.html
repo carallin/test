@@ -145,6 +145,24 @@ function merge2(arr,low,mid,high) {
 
 
 
+function A() {
+  this.name = 'tian';
+  return this;
+}
+A.prototype.getName = function () {
+  return this.name;
+}
+function B() {
+  this.age = 12;
+  return this;
+}
+B.prototype = new A();
+
+var Bo = new B();
+
+console.log(B.prototype.getName);
+
+
 
 
 
